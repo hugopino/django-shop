@@ -6,9 +6,6 @@ def home(request):
 def shop(request):
     return render(request, 'app/shop.html')
 
-def blog(request):
-    return render(request, 'app/blog.html')
-
 def contact(request):
     return render(request, 'app/contact.html')
 
