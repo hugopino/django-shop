@@ -1,3 +1,22 @@
 {% extends "app/base.html" %} {% load static %} {% block content %}
-<div></div>
+<div class="mt-5 row container">
+  {% for product in products %}
+
+  <div
+    class="card col col-6 mx-auto mx-md-1 my-2 d-inline-block px-5 py-5"
+    style="width: 18rem"
+  >
+    <img
+      src="{{product.imagen.url}}"
+      class="card-img-top"
+      alt="{{product.title}}"
+    />
+    <div class="card-body">
+      <h2 class="h3 card-title">{{product.title}}</h2>
+      <p class="card-text">{{product.price}}</p>
+      <a href="#" class="btn btn-dark">Buy now!</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
 {% endblock%}
